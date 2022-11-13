@@ -537,6 +537,7 @@ p {
 
   border: transparent;
   border-radius: 4px;
+  box-shadow: none;
 
   font-weight: 500;
   font-size: 16px;
