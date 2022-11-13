@@ -351,8 +351,8 @@ p {
   color: #afb1b8;
 
   transition-property: background-color, color;
-  transition-duration: var(--time), var(--time);
-  transition-timing-function: var(--cubic) var(--cubic);
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .social-link:hover,
@@ -424,8 +424,8 @@ p {
   border-radius: 4px;
 
   transition-property: border, color;
-  transition-duration: var(--time), var(--time);
-  transition-timing-function: var(--cubic) var(--cubic);
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .client-icon {
@@ -531,14 +531,6 @@ p {
   border-top: 0;
 }
 
-.button:hover,
-.button:focus {
-  color: var(--primary-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .button {
   display: block;
   padding: 6px 22px;
@@ -554,13 +546,20 @@ p {
 
   background-color: #f5f4fa;
   color: var(--primary-text-color);
-  box-shadow: non;
 
   cursor: pointer;
 
-  transition-property: color, backgraund-color, box-shadow;
-  transition-duration: var(--time), var(--time), var(--time);
-  transition-timing-function: var(--cubic), var(--cubic), var(--cubic);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projekt-title {
@@ -587,7 +586,6 @@ p {
   top: 0;
   left: 0;
   transform: translateY(101%);
-
   width: 100%;
   height: 100%;
 
@@ -602,18 +600,25 @@ p {
 
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: transform var(--time) var(--cubic);
+  transition-property: transform;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .portfolio-items:hover .overley-portfolio {
   transform: translateY(0);
 }
 
+.portfolio-items {
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow var(--time) var(--cubic);
+}
+
 .portfolio-items:hover,
 .portfolio-items:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
 }
 
 /*===== Modal window =====*/
