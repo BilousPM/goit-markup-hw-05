@@ -550,7 +550,7 @@ p {
 
   cursor: pointer;
 
-  transition-property: color, background-color, box-shadow;
+  transition: color, background-color, box-shadow;
   transition-duration: var(--time);
   transition-timing-function: var(--cubic);
 }
